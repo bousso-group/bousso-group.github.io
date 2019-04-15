@@ -507,6 +507,7 @@ font header .navbar-default .navbar-nav li a:hover {
   /* height: auto; */
     height: 500px;
     width: auto;
+    /* display:inline; */
 }
 #portfolio-work .block .portfolio-contant .overly {
   position: absolute;
