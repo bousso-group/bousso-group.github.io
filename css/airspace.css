@@ -139,6 +139,39 @@ font header .navbar-default .navbar-nav li a:hover {
   letter-spacing: 3px;
 }
 /*--
+Research Start
+--*/
+#research {
+    padding: 100px 0;
+}
+#research ul{
+    list-style-type: disc;
+}
+#research .block h2 {
+    padding-top: 35px;
+    line-height: 27px;
+    margin: 0;
+}
+#research .block li {
+	  float: right;
+	  width: 95%;
+}
+#research .block p {
+    padding-top: 20px;
+	  float: right;
+	  width: 95%;
+}
+#research .block img {
+    padding-left: 40px;
+    width: 100%;
+}
+#research .section-title {
+    margin-bottom: 0px;
+}
+#research .section-title p {
+    padding-top: 20px;
+}
+/*--
 	wrapper Start
 --*/
 #intro {
