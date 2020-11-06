@@ -29,68 +29,6 @@ permalink: /members/
      background-color: white;
  }
 </style>
-<script>
-//<![CDATA[
-//alert ("ready");
-$(document).ready (function () {
-
-$(".trigger").on("click", function (e) {
-var id = this.id;
-var $content = $(this).next (".content");
-//var expanded = $content.is(":visible");
-var expanded = $content.hasClass ("shown");
-
-// hide/show content
-if (expanded) {
-$content.removeClass ("shown");
-$content.addClass ("hidden");
-
-} else {
-$content.removeClass ("hidden");
-$content.addClass ("shown");
-} // if
-
-//alert ("trigger: " + $(this).text());
-// state indicator
-// aria
-$(this).find ("[aria-expanded]")
-.attr ("aria-expanded", !expanded);
-
-$(this).find ("[aria-pressed]")
-.attr ("aria-pressed", !expanded);
-
-// images with class imageIndicator
-$(this).find (".imageIndicator").attr ({
-"src":
-(expanded)? "collapsed.jpg" : "expanded.jpg",
-"alt":
-(expanded)? "collapsed" : "expanded"
-}); // image
-
-// text
-$(this).find (".textIndicator")
-.text (
-(expanded)? " + " : " - "
-); // text
-
-// focus
-$(this).focus ();
-
-}); // click .trigger
-
-$("#automaticallyRead").on ("click", function () {
-if (this.checked) {
-$("#expandingSectionsContainer").attr ("aria-live", "polite");
-} else {
-$("#expandingSectionsContainer").attr ("aria-live", "off");
-} // if
-}); // click #automaticallyRead
-
-
-}); // ready
-
-//]]>
-</script>
 
     <!-- Slider Start -->
 <section id="global-header">
@@ -108,146 +46,136 @@ $("#expandingSectionsContainer").attr ("aria-live", "off");
     <!-- Portfolio Start -->
 <section id="portfolio-work">
     <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="block">
-              <div class="portfolio-contant">
-                <ul id="portfolio-contant-active">
-                    <li class="mix Professor">
-                        <img src="{{ site.baseurl }}/img/members/raphael.jpg" alt="Raphael" class="center">
-                      <h2  class="trigger" >
-                          <button class="collapsible" aria-pressed="false" aria-controls="collapsible-2">
-                              Raphael Bousso, Principal Investigator
-                              <span class="textIndicator"> + </span>
-                          </button></h2>
-                      <div class="content hidden">
-                          <p>
-                              I am interested in quantum gravity and cosmology. My research focuses on the deep role that quantum information plays in these settings. According to the <a href="https://en.wikipedia.org/wiki/Bousso%27s_holographic_bound">covariant entropy bound</a>, the geometry of spacetime is closely related to its information content. We have sharpened and strengthened this "holographic" relation in recent years. Though strictly a hypothesis about quantum gravity, entropy bounds have become a discovery tool that is yielding new, provable features of relativistic quantum field theory, such as the quantum null energy condition. These and related insights have led to fruitful interactions with quantum information theory and condensed matter physics. They also have useful applications to benchmarking current quantum computing platforms. I lead <a href="https://sites.google.com/view/geoflow/home">GeoFlow</a>, a multi-institutional consortium of theorists and experimentalists working at the interface of these areas.
-                          </p>
-                       <p>
-                             Brief bio: I grew up in southern Germany. (I was born and have family in Israel but never lived there.) When I was little, I thought math was interesting, and I still do. But I decided instead to try to figure out how the universe works. I studied with Stephen Hawking in Cambridge, and I spent postdoc years at Stanford, KITP (Santa Barbara), and Harvard, before joining UC Berkeley as faculty (since 2003).
-                          </p>
-                      </div>
-                    </li>
-                  <li class="mix Postdoc">
-                      <img src="{{ site.baseurl }}/img/members/hugo.jpg" alt="Hugo" class="center">
-                      <!-- </div> -->
-                      <!-- </div> -->
-                    <h2  class="trigger" >
-                        <button class="collapsible" aria-pressed="false" aria-controls="collapsible-2">
-                            Hugo Marocchio, Postdoc
-                            <span class="textIndicator"> + </span>
-                        </button></h2>
-                    <div class="content hidden">
-                        <p>
-                            Complexity and QFT
-                        </p>
-                    </div>
+        <h1> Principal Investigators</h1>
+    </div>
+    <div class="container">
+        <div class="block">
+            <h2> Raphael Bousso</h2>
+            <img src="{{ site.baseurl }}/img/members/raphael.jpg" alt="Raphael">
 
-                  </li>
-                  <li class="mix Postdoc">
-                      <img src="{{ site.baseurl }}/img/members/masamichi.jpg" alt="Masamichi" class="center">
-                      <!-- </div> -->
-                      <!-- </div> -->
-                    <h2  class="trigger" >
-                        <button class="collapsible" aria-pressed="false" aria-controls="collapsible-2">
-                            Masamichi Miyaji, Postdoc
-                            <span class="textIndicator"> + </span>
-                        </button></h2>
-                    <div class="content hidden">
-                        <p>
-                            Entanglement in CFTs
-                        </p>
-                    </div>
-
-                  </li>
-                  <li class="mix Student">
-                      <img src="{{ site.baseurl }}/img/members/ven.jpg" alt="Ven" class="center">
-                      <h2  class="trigger" >
-                          <button class="collapsible" aria-pressed="false" aria-controls="collapsible-2">
-                              Ven Chandrasekaran, Graduate Student
-                              <span class="textIndicator"> + </span>
-                          </button></h2>
-                      <div class="content hidden">
-                          <p>
-                              My research focus is centered around quantum field theory and quantum gravity. I am currently interested in understanding entanglement in QFT using algebraic methods such as Tomita-Takesaki theory, as well as defect CFT methods. I am particularly interested in the connection between these ideas and black hole thermodynamics, specifically in understanding its boundary description within AdS/CFT. I have also worked on using covariant phase space techniques to study the “edge mode” degrees of freedom associated to null boundaries, including dynamical event horizons.
-                          </p>
-                      </div>
-                  </li>
-                  <li class="mix Student">
-                      <img src="{{ site.baseurl }}/img/members/newton.jpg" alt="Newton" class="center">
-                      <h2  class="trigger" >
-                          <button class="collapsible" aria-pressed="false" aria-controls="collapsible-2">
-                              Newton Cheng, Graduate Student
-                              <span class="textIndicator"> + </span>
-                          </button></h2>
-                      <div class="content hidden">
-                          <p>
-                              Newton
-                          </p>
-                      </div>
-                  </li>
-                  <li class="mix Student">
-                      <img src="{{ site.baseurl }}/img/members/vincent.jpg" alt="Vincent" class="center">
-                      <h2  class="trigger" >
-                          <button class="collapsible" aria-pressed="false" aria-controls="collapsible-2">
-                              Vincent Su, Graduate Student
-                              <span class="textIndicator"> + </span>
-                          </button></h2>
-                      <div class="content hidden">
-                          <p>
-                              I’m interested in applications of (quantum) computation in better understanding holography.
-                          </p>
-                      </div>
-                  </li>
-                  <li class="mix Student">
-                      <img src="{{ site.baseurl }}/img/members/misha.jpg" alt="Misha" class="center">
-                      <h2  class="trigger" >
-                          <button class="collapsible" aria-pressed="false" aria-controls="collapsible-2">
-                              Misha Usatyuk, Graduate Student
-                              <span class="textIndicator"> + </span>
-                          </button></h2>
-                      <div class="content hidden">
-                          <p>
-                              Misha
-                          </p>
-                      </div>
-                  </li>
-                  <li class="mix Student">
-                      <img src="{{ site.baseurl }}/img/members/liz.jpg" alt="Liz" class="center">
-                      <h2  class="trigger" >
-                          <button class="collapsible" aria-pressed="false" aria-controls="collapsible-2">
-                              Liz Wildenhain, Graduate Student
-                              <span class="textIndicator"> + </span>
-                          </button></h2>
-                      <div class="content hidden">
-                          <p>
-                              Liz
-                          </p>
-                      </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+            <p>
+                I am interested in quantum gravity and cosmology. My research focuses on the deep role that quantum information plays in these settings. According to the <a href="https://en.wikipedia.org/wiki/Bousso%27s_holographic_bound">covariant entropy bound</a>, the geometry of spacetime is closely related to its information content. We have sharpened and strengthened this "holographic" relation in recent years. Though strictly a hypothesis about quantum gravity, entropy bounds have become a discovery tool that is yielding new, provable features of relativistic quantum field theory, such as the quantum null energy condition. These and related insights have led to fruitful interactions with quantum information theory and condensed matter physics. They also have useful applications to benchmarking current quantum computing platforms. I lead <a href="https://sites.google.com/view/geoflow/home">GeoFlow</a>, a multi-institutional consortium of theorists and experimentalists working at the interface of these areas.
+            </p>
+            <p>
+                Brief bio: I grew up in southern Germany. (I was born and have family in Israel but never lived there.) When I was little, I thought math was interesting, and I still do. But I decided instead to try to figure out how the universe works. I studied with Stephen Hawking in Cambridge, and I spent postdoc years at Stanford, KITP (Santa Barbara), and Harvard, before joining UC Berkeley as faculty (since 2003).
+            </p>
         </div>
-        <section id="alumni">
-            <h2> Recent Alumni</h2>
-            <h3> Post Docs</h3>
-            <ul id="recent-post-docs">
+    </div>
+    <div class="container">
+        <div class="block">
+            <h2> Geoff Penington</h2>
+            <img src="{{ site.baseurl }}/img/members/generic.jpg" alt="Geoff">
+
+            <p>
+                Fill out the survey to update what this text will be!
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <h1> Post-Docs</h1>
+    </div>
+    <div class="container">
+        <div class="block">
+            <h2> Hugo Marrochio</h2>
+            <img src="{{ site.baseurl }}/img/members/hugo.jpg" alt="Hugo">
+            <p>
+                Fill out the survey to update what this text will be!
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block">
+            <h2> Masamichi Miyaji</h2>
+            <img src="{{ site.baseurl }}/img/members/masamichi.jpg" alt="Masamichi">
+            <p>
+                Quantum information and Quantum gravity
+            </p>
+        </div>
+    </div>
+    <div class="container">
+            <h1> Grad Students</h1>
+    </div>
+    <div class="container">
+        <div class="block">
+            <h2> Nick Aldana</h2>
+            <img src="{{ site.baseurl }}/img/members/generic.jpg" alt="Nick">
+            <p>
+                I am interested in identifying the most fundamental and robust aspects of AdS/CFT, such as the RT formula, and using them as guiding principles for more general quantum gravity theories. I am also interested in geometric quantization of constrained systems and potential connections to holography.
+
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block">
+            <h2> Reginald Caginalp</h2>
+            <img src="{{ site.baseurl }}/img/members/generic.jpg" alt="Reginald">
+            <p>
+                My interests are in the interplay between quantum information and quantum gravity. I am also interested in understanding what classical general relativity results can be generalized to quantum gravity settings, and what these generalizations could tell us about quantum field theory.
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block">
+            <h2> Ven Chandrasekaran</h2>
+            <img src="{{ site.baseurl }}/img/members/ven.jpg" alt="Ven">
+            <p>
+                I am interested in understanding the emergence of spacetime geometry from entanglement. To this aim, I am interested in studying whether edge modes of gravitational theories with boundaries are responsible for gravitational entropy of subregions. I am also interested in what modular flow can tell us about bulk reconstruction.
+
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block">
+            <h2> Newton Cheng</h2>
+            <img src="{{ site.baseurl }}/img/members/newton.jpg" alt="Newton">
+            <p>
+                Entanglement measures and their holographic duals. Quantum error correction to understand how bulk degrees of freedom are encoded in boundary degrees of freedom.
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block">
+            <h2> Vincent Su</h2>
+            <img src="{{ site.baseurl }}/img/members/vincent.jpg" alt="Vincent">
+            <p>
+                Basic questions that drive me include the following: How can we use quantum computers to learn more about quantum physics? How can we accelerate the usefulness of quantum computers? Can black holes be simulated by tabletop experiments involving everyday atoms?
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block">
+            <h2> Misha Usatyuk</h2>
+            <img src="{{ site.baseurl }}/img/members/misha.jpg" alt="Misha">
+            <p>
+                Fill out the survey to update what this text will be!
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block">
+            <h2> Liz Wildenhain</h2>
+            <img src="{{ site.baseurl }}/img/members/liz.jpg" alt="Liz">
+            <p>
+                Liz enjoys investigating the apparent paradoxes that appear for evaporating black holes (such as the information paradox and the firewall paradox) and the significance of entanglement wedge islands. She is also broadly interested in applying quantum information concepts to quantum gravity.
+            </p>
+        </div>
+    </div>
+    <div class="container">
+            <h1> Recent Alumni</h1>
+            <h2> Post-Docs</h2>
+            <ul>
                 <li>Ning Bao</li>
                 <li>Grant Remmen</li>
             </ul>
-            <h3> Graduate Students</h3>
-            <ul id="recent-grad">
-                <li>Pratik Rath</li>
-                <li>Arvin Shahbazi-Moghaddam</li>
-                <li>Illan Halpern</li>
-                <li>Adam Levine</li>
-                <li>Chris Akers</li>
-                <li>Mudassir Moosa</li>
+            <h2> Graduate Students</h2>
+            <ul>
+            <li>Pratik Rath</li>
+            <li>Arvin Shahbazi-Moghaddam</li>
+            <li>Illan Halpern</li>
+            <li>Adam Levine</li>
+            <li>Chris Akers</li>
+            <li>Mudassir Moosa</li>
             </ul>
-        </section>
     </div>
 </section>
 

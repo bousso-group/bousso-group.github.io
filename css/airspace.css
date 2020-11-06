@@ -405,8 +405,21 @@ font header .navbar-default .navbar-nav li a:hover {
 	portfolio-work Start
 --*/
 #portfolio-work {
-  overflow: hidden;
+  overflow: auto;
   padding: 80px 0;
+}
+#portfolio-work p {
+	  float: right;
+	  width: 75%;
+}
+
+#portfolio-work img {
+	  float: left;
+	  width: 20%;
+}
+#portfolio-work .block {
+    margin: 0 auto;
+    top: 23px;
 }
 #portfolio-work .block .portfolio-menu {
   padding-bottom: 30px;
